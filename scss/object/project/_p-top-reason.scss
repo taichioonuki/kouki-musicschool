@@ -110,10 +110,4 @@
     }
 }
 
-.reason__item:nth-child(2) .reason-item_catch,
-.reason__item:nth-child(3) .reason-item_catch {
-    @include pc {
-        top: -1rem;
-    }
-}
 

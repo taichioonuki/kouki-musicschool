@@ -38,13 +38,13 @@ $guide-item-shift: 0.75rem;
     position: absolute;
     left: 1.7rem;
     top: 2rem;
-    height: 66rem;
+    height: 65.7rem;
     width: 0.3rem;
     background: $color-red;
     @include pc {
-        height: 42.6rem;
         left: 6rem;
         top: 0;
+        height: 42.4rem;
     }
 }
 
@@ -55,7 +55,7 @@ $guide-item-shift: 0.75rem;
     transform: translateX(-40%);
     width: 3.5rem;
     height: 2rem;
-    top: 66.1rem;
+    top: 66rem;
     background: url('../images/guide-arrow.svg') no-repeat center / contain;
     @include pc {
         left: 6.15rem;
@@ -116,10 +116,15 @@ $guide-item-shift: 0.75rem;
     line-height: calc(30 / 16);
     margin-left: 3.3rem;
     margin-top: 1rem;
+    // 500px到達後にルートフォントサイズが頭打ちになり、そのまま幅だけ広がると
+    // 折り返し行数が変わって高さがズレる（=左の赤い線が合わなくなる）ため、
+    // 500px時点の折り返し幅で固定して375〜767pxで折り返しを一定に保つ
+    max-width: 367.7px;
     @include pc {
         font-size: 1.8rem;
         line-height: calc(30 / 18);
         margin-top: 0;
         margin-left: 0;
+        max-width: none;
     }
 }

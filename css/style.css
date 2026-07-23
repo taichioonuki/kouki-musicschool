@@ -1291,15 +1291,15 @@ body[class] .fv__catch {
   position: absolute;
   left: 1.7rem;
   top: 2rem;
-  height: 66rem;
+  height: 65.7rem;
   width: 0.3rem;
   background: #CB0000;
 }
 @media (min-width: 768px) {
   .guide__items::before {
-    height: 42.6rem;
     left: 6rem;
     top: 0;
+    height: 42.4rem;
   }
 }
 
@@ -1311,7 +1311,7 @@ body[class] .fv__catch {
           transform: translateX(-40%);
   width: 3.5rem;
   height: 2rem;
-  top: 66.1rem;
+  top: 66rem;
   background: url("../images/guide-arrow.svg") no-repeat center/contain;
 }
 @media (min-width: 768px) {
@@ -1395,6 +1395,7 @@ body[class] .fv__catch {
   line-height: 1.875;
   margin-left: 3.3rem;
   margin-top: 1rem;
+  max-width: 367.7px;
 }
 @media (min-width: 768px) {
   .guide-item__text {
@@ -1402,6 +1403,7 @@ body[class] .fv__catch {
     line-height: 1.6666666667;
     margin-top: 0;
     margin-left: 0;
+    max-width: none;
   }
 }
 
@@ -1739,13 +1741,6 @@ body[class] .fv__catch {
     margin-left: 5rem;
     font-size: 1.8rem;
     line-height: 1.8333333333;
-  }
-}
-
-@media (min-width: 768px) {
-  .reason__item:nth-child(2) .reason-item_catch,
-  .reason__item:nth-child(3) .reason-item_catch {
-    top: -1rem;
   }
 }
 
@@ -4526,7 +4521,7 @@ body {
 }
 .page-result-details .result-details__image {
   position: relative;
-  width: 33.5rem;
+  width: 100%;
   aspect-ratio: 335/236;
   overflow: hidden;
 }

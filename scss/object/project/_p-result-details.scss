@@ -17,7 +17,7 @@
 
     .result-details__image {
         position: relative;
-        width: 33.5rem;
+        width: 100%;
         aspect-ratio: 335 / 236;
         overflow: hidden;
         @include pc {
