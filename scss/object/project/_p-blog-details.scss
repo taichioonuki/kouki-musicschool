@@ -579,8 +579,10 @@
     line-height: 1;
     outline: none;
     min-width: 0;
+    height: 5.5rem;
     @include pc {
         padding: 1rem 1.2rem;
+        height: 3.9rem;
     }
 }
 
