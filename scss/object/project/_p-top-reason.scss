@@ -77,10 +77,10 @@
     @include pc {
         font-size: 2.2rem;
         line-height: calc(33 / 22);
-        margin-top: -0.2rem;
+        margin-top: 0;
         margin-left: 5rem;
         margin-bottom: 4.6rem;
-        padding-bottom: 0.2rem;
+        transform: translateY(-0.2rem);
     }
 }
 
@@ -94,6 +94,7 @@
     background: $color-red;
     @include pc {
         left: -5rem;
+        bottom: -1.2rem;
     }
 }
 
@@ -103,7 +104,7 @@
     margin-top: 1.7rem;
     margin-left: 0;
     @include pc {
-        margin-top: 3.6rem;
+        margin-top: 4.6rem;
         margin-left: 5rem;
         font-size: 1.8rem;
         line-height: calc(33 / 18);
