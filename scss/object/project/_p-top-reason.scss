@@ -72,15 +72,13 @@
     line-height: calc(30 / 20);
     font-weight: 700;
     margin-top: 3.1rem;
-    margin-bottom: 2.6rem;
-    margin-left: 0;
+    padding-bottom: 1rem;
     @include pc {
         font-size: 2.2rem;
         line-height: calc(33 / 22);
         margin-top: 0;
-        margin-left: 5rem;
-        margin-bottom: 4.6rem;
-        transform: translateY(-0.2rem);
+        padding-bottom: 1.2rem;
+        padding-left: 5rem;
     }
 }
 
@@ -89,25 +87,23 @@
     position: absolute;
     left: 0;
     right: 0;
-    bottom: -1rem;
+    bottom: 0;
     height: 2px;
     background: $color-red;
     @include pc {
-        left: -5rem;
-        bottom: -1.2rem;
+        left: 0rem;
     }
 }
 
 .reason-item_catch p {
     font-size: 1.6rem;
     line-height: calc(30 / 16);
-    margin-top: 1.7rem;
-    margin-left: 0;
+    margin-top: 1.6rem;
     @include pc {
-        margin-top: 4.6rem;
-        margin-left: 5rem;
+        margin-top: 3.4rem;
         font-size: 1.8rem;
         line-height: calc(33 / 18);
+        padding-left: 5rem;
     }
 }
 

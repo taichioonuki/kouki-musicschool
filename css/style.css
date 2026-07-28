@@ -1700,18 +1700,15 @@ body[class] .fv__catch {
   line-height: 1.5;
   font-weight: 700;
   margin-top: 3.1rem;
-  margin-bottom: 2.6rem;
-  margin-left: 0;
+  padding-bottom: 1rem;
 }
 @media (min-width: 768px) {
   .reason-item_catch h3 {
     font-size: 2.2rem;
     line-height: 1.5;
     margin-top: 0;
-    margin-left: 5rem;
-    margin-bottom: 4.6rem;
-    -webkit-transform: translateY(-0.2rem);
-            transform: translateY(-0.2rem);
+    padding-bottom: 1.2rem;
+    padding-left: 5rem;
   }
 }
 
@@ -1720,29 +1717,27 @@ body[class] .fv__catch {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: -1rem;
+  bottom: 0;
   height: 2px;
   background: #CB0000;
 }
 @media (min-width: 768px) {
   .reason-item_catch h3::after {
-    left: -5rem;
-    bottom: -1.2rem;
+    left: 0rem;
   }
 }
 
 .reason-item_catch p {
   font-size: 1.6rem;
   line-height: 1.875;
-  margin-top: 1.7rem;
-  margin-left: 0;
+  margin-top: 1.6rem;
 }
 @media (min-width: 768px) {
   .reason-item_catch p {
-    margin-top: 4.6rem;
-    margin-left: 5rem;
+    margin-top: 3.4rem;
     font-size: 1.8rem;
     line-height: 1.8333333333;
+    padding-left: 5rem;
   }
 }
 
