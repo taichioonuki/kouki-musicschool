@@ -1,6 +1,10 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
+.page-results .fv__contents::after {
+    display: none;
+}
+
 .page-results .pagination__gap .pagination__item:nth-child(1) { margin-left: 0; }
 .page-results .pagination__gap .pagination__item:nth-child(2) {
     margin-left: 0.45rem;
@@ -27,13 +31,6 @@
     }
 }
 
-.page-results .pagination__item.is-dots span {
-    margin-top: 0;
-    @include pc {
-        margin-top: 0;
-    }
-}
-
 .page-results .pagination {
     margin-top: 5.8rem;
     @include pc {
@@ -42,7 +39,7 @@
 }
 
 .result-list {
-    padding: 4rem 0 8rem;
+    padding: 4rem 0 20.3rem;
     @include pc {
         padding: 6.7rem 0 21rem;
     }
@@ -50,10 +47,12 @@
 
 .result-list__title {
     font-size: 2rem;
+    line-height: calc(30 / 20);
     font-weight: 700;
     text-align: center;
     @include pc {
         font-size: 2.5rem;
+        line-height: calc(40 / 25);
     }
 }
 
@@ -65,21 +64,25 @@
     @include pc {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 10.6rem;
-        margin-top: 4rem;
+        margin-top: 3.8rem;
     }
 
-    // 2段目以降
-    & > :nth-child(n+3) {
+    // SP: 2番目以降のアイテムはすべて同じ間隔
+    & > :nth-child(n+2) {
         margin-top: 3.5rem;
-        @include pc {
+    }
+
+    @include pc {
+        // PC: 1段目は余白なし（SPの一律余白を打ち消す）
+        & > :nth-child(n+2) {
+            margin-top: 0;
+        }
+        // 2段目以降
+        & > :nth-child(n+3) {
             margin-top: 6.2rem;
         }
-    }
-
-    // 3段目以降
-    & > :nth-child(n+5) {
-        margin-top: 3.5rem;
-        @include pc {
+        // 3段目以降
+        & > :nth-child(n+5) {
             margin-top: 7.2rem;
         }
     }
@@ -87,6 +90,7 @@
 
 .result-list-item {
     display: block;
+    min-width: 0;
 }
 
 .result-list-item__image {
@@ -95,7 +99,7 @@
     width: 100%;
     aspect-ratio: 387 / 273;
     @include pc {
-        width: 38.7rem;
+        max-width: 38.7rem;
     }
 }
 
@@ -111,7 +115,9 @@
     font-weight: 700;
     width: 10rem;
     height: 3rem;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     @include pc {
         font-size: 1.5rem;
     }

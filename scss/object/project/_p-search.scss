@@ -3,7 +3,7 @@
 
 .page-search {
     .search {
-        padding: 3.9rem 0 20.2rem;
+        padding: 3.7rem 0 20.2rem;
         @include pc {
             padding: 6.8rem 0 21rem;
         }
@@ -17,6 +17,7 @@
 
     .search__keyword {
         font-size: 1.8rem;
+        line-height: calc(30 / 18);
     }
 
     .search__keyword-text {
@@ -25,12 +26,13 @@
 
     .search__count {
         font-size: 1.8rem;
+        line-height: calc(30 / 18);
     }
 
     .search__items {
         display: flex;
         flex-direction: column;
-        margin-top: 4.3rem;
+        margin-top: 4.1rem;
     }
 
     .search-item {
@@ -44,7 +46,7 @@
         &:nth-child(2) {
             margin-top: 3.9rem;
             @include pc {
-                margin-top: 6.7rem;
+                margin-top: 6.6rem;
             }
         }
         &:nth-child(3) {
@@ -132,6 +134,7 @@
         padding-top: 1.5rem;
         @include pc {
             padding-top: 0;
+            margin-top: -0.5rem;
         }
     }
 
@@ -140,9 +143,6 @@
         font-size: 2rem;
         font-weight: 700;
         line-height: calc(30 / 20);
-        @include pc {
-            margin-top: -0.5rem;
-        }
     }
 
     .search-item__date {

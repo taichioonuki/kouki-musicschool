@@ -41,7 +41,7 @@
     margin-top: 2.2rem;
     @include pc {
         column-gap: 0;
-        margin-top: 2.1rem;
+        margin-top: 2.2rem;
     }
 }
 
@@ -50,6 +50,7 @@
 }
 
 .blog-details__share .share-btn {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -59,9 +60,8 @@
     overflow: hidden;
     margin-left: 0;
 
-    picture {
+    .share-btn__icon {
         display: block;
-        line-height: 0;
     }
 
     @include pc {
@@ -69,54 +69,57 @@
         flex-shrink: 0;
         width: auto;
         background: none;
-        picture {
-            display: block;
+
+        .share-btn__icon {
+            position: absolute;
+            inset: 0;
             width: 100%;
+            height: 100%;
         }
     }
 
     &--facebook {
         background-color: #425893;
-        picture img { width: 1.17rem; height: auto; }
+        .share-btn__icon { width: 1.17rem; }
         @include pc {
             width: 10.5rem;
-            picture img { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--twitter {
         background-color: #4A9FEB;
-        picture img { width: 1.95rem; height: auto; }
+        .share-btn__icon { width: 1.95rem; }
         @include pc {
             width: 8.8rem;
             margin-left: 0.4rem;
-            picture img { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--hatena {
         background-color: #4EACD5;
-        picture img { width: 1.69rem; height: auto; }
+        .share-btn__icon { width: 1.69rem; }
         @include pc {
             width: 9.3rem;
             margin-left: 0.3rem;
-            picture img { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--line {
         background-color: #52B534;
-        picture img { width: 2.15rem; height: auto; }
+        .share-btn__icon { width: 2.15rem; }
         @include pc {
             width: 8.1rem;
             margin-left: 0.3rem;
-            picture img { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
     &--pocket {
         background-color: #DC4F5A;
-        picture img { width: 2.15rem; height: auto; }
+        .share-btn__icon { width: 2.15rem; }
         @include pc {
             width: 9.1rem;
             margin-left: 0.3rem;
-            picture img { width: 100%; }
+            .share-btn__icon { width: 100%; }
         }
     }
 }
@@ -262,11 +265,15 @@
     display: inline-block;
     color: $color-red;
     text-decoration: underline;
-    text-decoration-thickness: 1px;
-    text-underline-offset: 2px;
+    text-decoration-thickness: 0.1rem;
+    text-underline-offset: 0.2rem;
     font-size: 2rem;
+    line-height: calc(30 / 20);
     font-weight: 700;
-    margin-top: 2.7rem;
+    margin-top: 2.9rem;
+    @include pc {
+        margin-top: 2.8rem;
+    }
 }
 
 .blog-details__divider {
@@ -291,14 +298,11 @@
         margin-top: 1.7rem;
     }
 
-    &::before {
-        content: '';
+    .blog-details__blockquote-icon {
+        display: block;
         flex-shrink: 0;
         width: 2.8rem;
         height: 2.4rem;
-        background-image: url('../../images/icon-blockquote.svg');
-        background-repeat: no-repeat;
-        background-size: contain;
         margin-left: 0.9rem;
         margin-top: 0.4rem;
         @include pc {
@@ -321,10 +325,10 @@
 .blog-details__nav {
     display: flex;
     gap: 2.2rem;
-    margin-top: 4.2rem;
+    margin-top: 4.4rem;
     @include pc {
         gap: 7.9rem;
-        margin-top: 5.3rem;
+        margin-top: 5.5rem;
     }
 }
 
@@ -334,7 +338,7 @@
     flex: 1;
     text-decoration: none;
     color: $color-black;
-    transition: opacity 0.2s;
+    transition: opacity 0.4s;
 }
 
 @include hover {
@@ -373,10 +377,13 @@
 
 .blog-details__nav-image {
     width: 9.8rem;
+    aspect-ratio: 160 / 107;
+    overflow: hidden;
     flex-shrink: 0;
     display: none;
     @include pc {
         display: block;
+        aspect-ratio: 98 / 68;
     }
 }
 
@@ -387,7 +394,7 @@
 }
 
 .blog-details__related {
-    margin-top: 6.3em;
+    margin-top: 6.4em;
     @include pc {
         margin-top: 9.3rem;
     }
@@ -422,7 +429,7 @@
     gap: 2rem;
     text-decoration: none;
     color: $color-black;
-    transition: opacity 0.2s;
+    transition: opacity 0.4s;
     margin-top: 1.9rem;
     align-items: flex-start;
     @include pc {
@@ -444,15 +451,30 @@
     flex-shrink: 0;
     overflow: hidden;
 
-    .blog-details__related-img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
     @include pc {
         width: 20rem;
         aspect-ratio: 20 / 14;
+    }
+}
+
+.page-blog-details .blog-list-item__category {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 8rem;
+    height: 3rem;
+    background-color: $color-red;
+    color: $color-white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include pc {
+        width: 8rem;
+        height: 3rem;
     }
 }
 
@@ -495,7 +517,7 @@
     gap: 2.97rem;
     @include pc {
         width: 25rem;
-        gap: 3rem;
+        gap: 3.07rem;
     }
 }
 
@@ -554,10 +576,13 @@
     border-right: none;
     padding: 1.65rem;
     font-size: 1.4rem;
+    line-height: 1;
     outline: none;
     min-width: 0;
+    height: 5.5rem;
     @include pc {
         padding: 1rem 1.2rem;
+        height: 3.9rem;
     }
 }
 
@@ -580,7 +605,8 @@
         width: 4rem;
     }
 
-    .sidebar-search__icon {
+    .sidebar-search__btn-icon {
+        display: block;
         width: 3rem;
         height: 3rem;
         @include pc {
@@ -610,7 +636,7 @@
     gap: 2rem;
     text-decoration: none;
     color: $color-black;
-    transition: opacity 0.2s;
+    transition: opacity 0.4s;
     @include pc {
         gap: 1.2rem;
     }
@@ -656,22 +682,18 @@
 
 .sidebar-categories__list li {
     border-bottom: 0.5px solid $color-black;
-    padding-bottom: 0.75rem;
-    @include pc {
-        padding-bottom: 0.7rem;
-    }
 }
 
 .sidebar-categories__list li a {
     display: block;
-    padding: 1.1rem 0.1rem 0;
+    padding: 1.1rem 0.1rem 0.75rem;
     font-size: 1.7rem;
     line-height: calc(28 / 17);
     color: $color-black;
     text-decoration: none;
-    transition: opacity 0.2s;
+    transition: opacity 0.4s;
     @include pc {
-        padding: 1.2rem 0.1rem 0;
+        padding: 1.25rem 0.1rem 0.6rem;
     }
 }
 

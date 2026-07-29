@@ -9,8 +9,9 @@ html {
     scroll-padding-top: 8rem;
     word-break: break-all;
     scroll-behavior: smooth;
+    scrollbar-gutter: stable;
     font-size: min(calc(10 / 375 * 100vw), calc(500 / 375 * 10px));
-    color: rgba(0, 0, 0, 1);
+    color: #000000;
     @include pc {
         font-size: calc(10 / 940 * 100vw);
     }
@@ -23,13 +24,14 @@ html, body {
     padding: 0;
 }
 body {
-    padding-top: 50px;
+    padding-top: 5rem;
     font-weight: 500;
-    font-family: "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", sans-serif;
+    font-family: "YuGothic", "Yu Gothic", "游ゴシック", "游ゴシック体", "Noto Sans JP", sans-serif;
+    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     letter-spacing: 0;
     @include pc {
-        padding-top: 80px;
+        padding-top: 8rem;
     }
 }
 
@@ -50,11 +52,15 @@ img {
     display: block;
 }
 
+a,
+button {
+    transition: opacity 0.4s;
+}
+
 @include hover {
     a:hover,
     button:hover {
         opacity: 0.7;
-        transition: opacity 0.4s;
     }
 }
 
@@ -68,7 +74,7 @@ img {
     max-width: none;
     margin: 0 auto;
     @include pc {
-        max-width: 940px;
+        max-width: 94rem;
         padding-inline: 3rem;
     }
 }

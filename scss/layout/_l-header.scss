@@ -19,10 +19,6 @@
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    padding-top: 0;
-    @include pc {
-        padding-top: 0.5rem;
-    }
 }
 
 .header__left {
@@ -31,38 +27,36 @@
     align-self: stretch;
 }
 
+.header__link {
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    text-decoration: none;
+}
+
 .header__image {
     width: 2.1rem;
-    margin-top: 0;
-    margin-right: -0.5rem;
-    padding-right: 0;
+    aspect-ratio: 33 / 50;
     @include pc {
-        width: 4.3rem;
-        padding-right: 1rem;
-        margin-top: -0.5rem;
-        margin-right: 0;
+        width: 3.2rem;
+        margin-right: 1rem;
     }
 }
 
 .header__logo {
     align-self: stretch;
-    display: flex;
-    align-items: center;
-}
-
-.header__logo a {
     font-size: 1.3rem;
-    line-height: calc(23 / 20);
+    line-height: calc(14 / 13);
     font-weight: 700;
-    text-decoration: none;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding-left: 1rem;
+    padding-left: 0.6rem;
     @include pc {
         font-size: 2rem;
+        line-height: calc(23 / 20);
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
@@ -70,11 +64,12 @@
     }
 }
 
-.header__logo a span {
+.header__logo span {
     font-size: 1.3rem;
-    line-height: calc(23 / 15);
+    line-height: calc(14 / 13);
     @include pc {
         font-size: 1.5rem;
+        line-height: calc(23 / 15);
     }
 }
 
@@ -101,6 +96,7 @@
     align-items: center;
     height: 100%;
     font-size: 1.7rem;
+    line-height: 1;
     text-decoration: none;
 
     @include hover {
@@ -120,10 +116,10 @@
     &::after {
         content: '';
         position: absolute;
-        bottom: -2px;
+        bottom: -0.6rem;
         left: 0;
         width: 0;
-        height: 2px;
+        height: 0.2rem;
         background-color: $color-red;
         transition: width 0.4s;
     }
@@ -131,6 +127,7 @@
 
 .header__nav.pc ul li.nav-contact a {
     font-size: 1.5rem;
+    line-height: 1;
     text-decoration: none;
 }
 
@@ -149,6 +146,7 @@
     height: 4.2rem;
     font-weight: 700;
     font-size: 1.5rem;
+    line-height: 1;
     border: 1px solid $color-red;
     transition: background-color 0.4s, color 0.4s;
 }
@@ -166,7 +164,7 @@
     display: block;
     position: absolute;
     width: 7.1rem;
-    height: 50px;
+    height: 5rem;
     background: $color-red;
     margin-left: auto;
     z-index: 999;
@@ -183,11 +181,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    width: 32px;
-    height: 4px;
+    width: 3.2rem;
+    height: 0.4rem;
     border-radius: 5px;
     background: $color-white;
-    transition: .4s;
+    transition: 0.4s;
 }
 
 .hamburger span:nth-of-type(1) {
@@ -219,7 +217,7 @@
     top: 5rem;
     right: 0;
     transform: translateX(100%);
-    transition: transform .4s;
+    transition: transform 0.4s;
     background: $color-red;
     z-index: 200;
     @include pc {
@@ -237,6 +235,7 @@
     text-align: left;
     list-style: none;
     font-size: 1.8rem;
+    line-height: 1;
     font-weight: 700;
     color: $color-white;
 }

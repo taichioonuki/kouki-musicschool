@@ -4,10 +4,18 @@
 // ベーススタイル（全ページ共通）
 .breadcrumb {
     background: $color-grey;
-    padding: 1.1rem 0 0.7rem;
+    display: flex;
+    align-items: stretch;
+    height: 3.6rem;
     @include pc {
-        padding: 1.8rem 0 1.3rem;
+        height: 5rem;
     }
+}
+
+.breadcrumb .inner {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
 }
 
 .breadcrumb__list {
@@ -17,9 +25,13 @@
     list-style: none;
     font-size: 1.6rem;
     line-height: 1.14;
-    row-gap: 0.2rem;
 }
 
+
+.breadcrumb__item {
+    display: flex;
+    align-items: center;
+}
 
 .breadcrumb__item:not(:last-child) {
     white-space: nowrap;
@@ -30,38 +42,58 @@
     margin-left: 2rem;
     margin-right: 2rem;
     color: $color-black;
-    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+
+.page-blog-details .breadcrumb__item:nth-child(2)::after {
+    margin-right: 2.2rem;
+}
+
+.page-blog-details .breadcrumb__item:nth-child(3)::after {
+    margin-right: 2.3rem;
+}
+
+// パンくずが折り返して2行・3行になるページ用の高さ調整（SPのみ）
+.page-blog-details .breadcrumb {
+    height: 5.9rem;
     @include pc {
-        top: -0.1rem;
+        height: 5rem;
     }
 }
 
-.page-result-details .breadcrumb__item:nth-child(1)::after {
-    margin-left: 2rem;
-    margin-right: 2rem;
+.page-result-details .breadcrumb {
+    height: 7.7rem;
     @include pc {
-        margin-left: 2rem;
-        margin-right: 2rem;
-    }
-}
-.page-result-details .breadcrumb__item:nth-child(2)::after {
-    margin-left: 2.3rem;
-    margin-right: 2.1rem;
-    @include pc {
-        margin-left: 2rem;
-        margin-right: 2.3rem;
-    }
-}
-.page-result-details .breadcrumb__item:nth-child(3)::after {
-    margin-left: 2rem;
-    margin-right: 2rem;
-    @include pc {
-        margin-left: 2rem;
-        margin-right: 1.9rem;
+        height: 5rem;
     }
 }
 
 .breadcrumb__item:has(.breadcrumb__link) {
-    padding: 0;
+    align-items: stretch;
+}
+
+// 折り返して複数行になるページの1行目を少し下げる（クリック領域はliの高さのまま維持）
+.page-blog-details .breadcrumb__item:nth-child(-n+3),
+.page-result-details .breadcrumb__item:nth-child(-n+3) {
+    padding-top: 0.9rem;
+    @include pc {
+        padding-top: 0;
+    }
+}
+
+// 2行目を少し上げる
+.page-blog-details .breadcrumb__item:nth-child(4),
+.page-result-details .breadcrumb__item:nth-child(4) {
+    padding-bottom: 0.5rem;
+    @include pc {
+        padding-bottom: 0;
+    }
+}
+
+.breadcrumb__link {
+    display: inline-flex;
+    align-items: center;
 }
 

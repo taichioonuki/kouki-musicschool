@@ -5,6 +5,9 @@
     <link rel="icon" href="images/header-icon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>きたむらミュージックスクール</title>
 </head>
@@ -28,10 +31,12 @@
         <div id="js-overlay" class="overlay"></div>
         <div class="inner">
             <div class="header__left"> 
-                <div class="header__image">
-                    <img src="images/header-icon.svg" alt="">
-                </div>
-                <h1 class="header__logo"><a href="#">きたむら<br class="pc"><span>ミュージックスクール</span></a></h1>
+                <a href="#" class="header__link">
+                    <div class="header__image">
+                        <img src="images/header-icon.svg" alt="ヘッダーアイコン">
+                    </div>
+                    <h1 class="header__logo">きたむら<br class="pc"><span>ミュージックスクール</span></h1>
+                </a>
             </div>
             <nav class="header__nav pc">
                 <ul>
@@ -52,7 +57,7 @@
                         <div class="fv-slide__image">
                             <picture>
                                 <source media="(min-width: 768px)" srcset="images/fv-pc.jpg">
-                                <img class="fv-slide__img" src="images/fv-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
+                                <img src="images/fv-sp.jpg" alt="「音楽で生きる」を叶えるミュージックスクール">
                             </picture>
                         </div>
                         <div class="fv__catch">
@@ -70,7 +75,7 @@
                             <div class="about__keywords">
                                 <picture>
                                     <source media="(min-width: 768px)" srcset="images/about-pc.svg">
-                                    <img src="images/about-sp.svg" alt="">
+                                    <img src="images/about-sp.svg" alt="曲線の装飾">
                                 </picture>
 
                                 <div class="about__diagram">
@@ -120,7 +125,7 @@
                                         </picture>
                                     </div>
                                     <div class="reason-item_catch">
-                                        <h2>技術面はプロによるマンツーマン授業！</h2>
+                                        <h3>技術面はプロによるマンツーマン授業！</h3>
                                         <p>第一線で活躍するプロによるマンツーマン授業で、きめ細かな技術指導が受けられます。</p>
                                     </div>
                                 </div>
@@ -133,7 +138,7 @@
                                         </picture>
                                     </div>
                                     <div class="reason-item_catch">
-                                        <h2>収益化するためのビジネスサポート！</h2>
+                                        <h3>収益化するためのビジネスサポート！</h3>
                                         <p>コンセプト設計や集客方法、マーケティングリサーチなど、音楽で稼ぎつづけるための方法やマインドセットをサポートするクラスをご用意。</p>
                                     </div>
                                 </div>
@@ -146,7 +151,7 @@
                                         </picture>
                                     </div>
                                     <div class="reason-item_catch">
-                                        <h2>24時間365日使える練習ROOMを完備！</h2>
+                                        <h3>24時間365日使える練習ROOMを完備！</h3>
                                         <p>一年中使える個室の練習ROOMを完備しているため、お仕事帰りや合間の時間も自由に練習が可能です。　（アプリで予約が必要です）</p>
                                     </div>
                                 </div>
@@ -164,13 +169,15 @@
                                     <div class="swiper-slide voice__item voice-item">
                                         <a href="./result_details.html" class="voice-item__link">
                                         <div class="voice-item__image">
-                                            <picture>
+                                            <span class="voice-item__photo">
+                                                <picture>
                                                 <source media="(min-width: 768px)" srcset="images/voice01-pc.jpg">
-                                                <img class="voice-item__img" src="images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                            </picture>
+                                                <img src="images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
+                                                </picture>
+                                            </span>
                                         </div>
                                         <div class="voice-item__text">
-                                            <h2>証券会社勤務　丸山さん</h2>
+                                            <h3>証券会社勤務　丸山さん</h3>
                                             <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
                                         </div>
                                         </a>
@@ -179,13 +186,15 @@
                                     <div class="swiper-slide voice__item voice-item">
                                         <a href="./result_details.html" class="voice-item__link">
                                         <div class="voice-item__image">
-                                            <picture>
+                                            <span class="voice-item__photo">
+                                                <picture>
                                                 <source media="(min-width: 768px)" srcset="images/voice02-pc.jpg">
-                                                <img class="voice-item__img" src="images/voice02-pc.jpg" alt="IT会社勤務　S.Eさん">
-                                            </picture>
+                                                <img src="images/voice02-sp.jpg" alt="IT会社勤務　S.Eさん">
+                                                </picture>
+                                            </span>
                                         </div>
                                         <div class="voice-item__text">
-                                            <h2>IT会社勤務　S.Eさん</h2>
+                                            <h3>IT会社勤務　S.Eさん</h3>
                                             <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
                                         </div>
                                         </a>
@@ -194,13 +203,15 @@
                                     <div class="swiper-slide voice__item voice-item">
                                         <a href="./result_details.html" class="voice-item__link">
                                         <div class="voice-item__image">
-                                            <picture>
+                                            <span class="voice-item__photo">
+                                                <picture>
                                                 <source media="(min-width: 768px)" srcset="images/voice03-pc.jpg">
-                                                <img class="voice-item__img" src="images/voice03-pc.jpg" alt="都内大学生　田森さん">
-                                            </picture>
+                                                <img src="images/voice03-sp.jpg" alt="都内大学生　田森さん">
+                                                </picture>
+                                            </span>
                                         </div>
                                         <div class="voice-item__text">
-                                            <h2>都内大学生　田森さん</h2>
+                                            <h3>都内大学生　田森さん</h3>
                                             <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
                                         </div>
                                         </a>
@@ -209,13 +220,15 @@
                                     <div class="swiper-slide voice__item voice-item">
                                         <a href="./result_details.html" class="voice-item__link">
                                         <div class="voice-item__image">
-                                            <picture>
+                                            <span class="voice-item__photo">
+                                                <picture>
                                                 <source media="(min-width: 768px)" srcset="images/voice01-pc.jpg">
-                                                <img class="voice-item__img" src="images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
-                                            </picture>
+                                                <img src="images/voice01-sp.jpg" alt="技術面はプロによるマンツーマン授業！">
+                                                </picture>
+                                            </span>
                                         </div>
                                         <div class="voice-item__text">
-                                            <h2>証券会社勤務　丸山さん</h2>
+                                            <h3>証券会社勤務　丸山さん</h3>
                                             <p>昔やっていた音楽活動で、副収入が得られるようになったので、毎日充実するようになりました。</p>
                                         </div>
                                         </a>
@@ -224,13 +237,15 @@
                                     <div class="swiper-slide voice__item voice-item">
                                         <a href="./result_details.html" class="voice-item__link">
                                         <div class="voice-item__image">
-                                            <picture>
+                                            <span class="voice-item__photo">
+                                                <picture>
                                                 <source media="(min-width: 768px)" srcset="images/voice02-pc.jpg">
-                                                <img class="voice-item__img" src="images/voice02-pc.jpg" alt="IT会社勤務　S.Eさん">
-                                            </picture>
+                                                <img src="images/voice02-sp.jpg" alt="IT会社勤務　S.Eさん">
+                                                </picture>
+                                            </span>
                                         </div>
                                         <div class="voice-item__text">
-                                            <h2>IT会社勤務　S.Eさん</h2>
+                                            <h3>IT会社勤務　S.Eさん</h3>
                                             <p>プロの指導が受けられるので、技術が確実に上がるし、音楽への考え方とかも勉強できて最高です。</p>
                                         </div>
                                         </a>
@@ -239,13 +254,15 @@
                                     <div class="swiper-slide voice__item voice-item">
                                         <a href="./result_details.html" class="voice-item__link">
                                         <div class="voice-item__image">
-                                            <picture>
+                                            <span class="voice-item__photo">
+                                                <picture>
                                                 <source media="(min-width: 768px)" srcset="images/voice03-pc.jpg">
-                                                <img class="voice-item__img" src="images/voice03-pc.jpg" alt="都内大学生　田森さん">
-                                            </picture>
+                                                <img src="images/voice03-sp.jpg" alt="都内大学生　田森さん">
+                                                </picture>
+                                            </span>
                                         </div>
                                         <div class="voice-item__text">
-                                            <h2>都内大学生　田森さん</h2>
+                                            <h3>都内大学生　田森さん</h3>
                                             <p>就職する前にビジネスの事が学べるし、好きな音楽で稼げるようになったので選択肢が増えました。</p>
                                         </div>
                                         </a>
@@ -253,9 +270,9 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="voice-btn-prev"></div>
+                        <div class="voice-btn-next"></div>
                     </div>
-                    <div class="voice-btn-prev"></div>
-                    <div class="voice-btn-next"></div>
                 </section>
 
                 <section class="guide">
@@ -294,36 +311,44 @@
                             <div class="accordion-area">
                                 <dl class="qa-list">
                                     <dt class="qa-title">
-                                        <img class="qa-icon" src="images/question.svg" width="35" height="35" alt="">
+                                        <span class="qa-title__icon"><img src="images/question.svg" alt="質問"></span>
                                         どのような生徒さんがどれぐらいの期間で稼いでいますか？
                                     </dt>
                                     <dd class="qa-text">
-                                        <img class="qa-icon" src="images/anser.svg" width="35" height="35" alt="">
-                                        回答テキスト1回答テキスト1回答テキスト1回答テキスト1回答テキスト1回答テキスト1
+                                        <div class="qa-text__inner">
+                                            <span class="qa-text__icon"><img src="images/anser.svg" alt="回答"></span>
+                                            回答テキスト1回答テキスト1回答テキスト1回答テキスト1回答テキスト1回答テキスト1
+                                        </div>
                                     </dd>
                                     <dt class="qa-title">
-                                        <img class="qa-icon" src="images/question.svg" width="35" height="35" alt="">
+                                        <span class="qa-title__icon"><img src="images/question.svg" alt="質問"></span>
                                         途中でプランを変更することは可能ですか？
                                     </dt>
                                     <dd class="qa-text">
-                                        <img class="qa-icon" src="images/anser.svg" width="35" height="35" alt="">
-                                        途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。
+                                        <div class="qa-text__inner">
+                                            <span class="qa-text__icon"><img src="images/anser.svg" alt="回答"></span>
+                                            途中でプラン変更も可能です。毎月15日までに申請すれば翌月からプランが変更となります。
+                                        </div>
                                     </dd>
                                     <dt class="qa-title">
-                                        <img class="qa-icon" src="images/question.svg" width="35" height="35" alt="">
+                                        <span class="qa-title__icon"><img src="images/question.svg" alt="質問"></span>
                                         入学金などの分割払いはできますか？
                                     </dt>
                                     <dd class="qa-text">
-                                        <img class="qa-icon" src="images/anser.svg" width="35" height="35" alt="">
-                                        回答テキスト3回答テキスト3回答テキスト3回答テキスト3回答テキスト3回答テキスト3
+                                        <div class="qa-text__inner">
+                                            <span class="qa-text__icon"><img src="images/anser.svg" alt="回答"></span>
+                                            回答テキスト3回答テキスト3回答テキスト3回答テキスト3回答テキスト3回答テキスト3
+                                        </div>
                                     </dd>
                                     <dt class="qa-title">
-                                        <img class="qa-icon" src="images/question.svg" width="35" height="35" alt="">
+                                        <span class="qa-title__icon"><img src="images/question.svg" alt="質問"></span>
                                         休学することも可能ですか？
                                     </dt>
                                     <dd class="qa-text">
-                                        <img class="qa-icon" src="images/anser.svg" width="35" height="35" alt="">
-                                        回答テキスト4回答テキスト4回答テキスト4回答テキスト4回答テキスト4回答テキスト4
+                                        <div class="qa-text__inner">
+                                            <span class="qa-text__icon"><img src="images/anser.svg" alt="回答"></span>
+                                            回答テキスト4回答テキスト4回答テキスト4回答テキスト4回答テキスト4回答テキスト4
+                                        </div>
                                     </dd>
                                 </dl>
                             </div>
@@ -394,7 +419,7 @@
         </main>
 
         <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
-            <img class="pagetop__icon" src="images/top-icon.svg" width="68" height="68" alt="ページトップへ戻る">
+            <img src="images/top-icon.svg" alt="ページトップへ戻る">
         </a>
 
         <div class="contact-btn">
@@ -411,9 +436,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="footer__image">
+            <a href="./index.html" class="footer__image">
                 <img src="images/footer-icon.svg" alt="フッターアイコン">
-            </div>
+            </a>
             <div class="footer__copyright">
                 <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
             </div>

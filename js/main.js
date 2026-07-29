@@ -31,7 +31,10 @@ $headerMenu.find('a').on('click', function(e) {
 const $pagetop = $('#js-pagetop');
 const $contactBtn = $('.contact-btn');
 const $toggleElements = $pagetop.add($contactBtn);
-const fvHeight = $('.fv').outerHeight();
+const $fv = $('.fv');
+// FVがないページは、他ページのFV（.fv-slide__imageのaspect-ratio）相当の高さを閾値にして表示タイミングを揃える
+const subFvRatio = window.matchMedia('(min-width: 768px)').matches ? 200 / 1080 : 300 / 375;
+const fvHeight = $fv.length ? $fv.outerHeight() : window.innerWidth * subFvRatio;
 const $footer = $('.footer');
 
 function updateButtons() {
@@ -63,14 +66,13 @@ $pagetop.on('click', function(e) {
 
 $('.qa-title').on('click', function(){
     $(this).toggleClass('active');
-    var $next = $(this).next('.qa-text');
-    if ($next.is(':hidden')) {
-        $next.slideDown(function() {
-            $(this).css('display', 'flex');
-        });
+    const $qaText = $(this).next('.qa-text');
+    if ($qaText.hasClass('is-open')) {
+        $qaText.css('max-height', '0px');
     } else {
-        $next.slideUp();
+        $qaText.css('max-height', $qaText.prop('scrollHeight') + 'px');
     }
+    $qaText.toggleClass('is-open');
 });
 
 $('.qa-text').on('click', function(){
@@ -114,25 +116,27 @@ if (wrapper && track && thumb) {
     thumb.addEventListener('pointerup', () => { isDragging = false; });
 }
 
-const voiceSwiper = new Swiper('.voice__swiper', {
-    slidesPerView: 1,
-    spaceBetween: 35,
-    loop: true,
-    grabCursor: false,
-    speed: 600,
-    breakpoints: {
-        768: {
-            slidesPerView: 3,
-            spaceBetween: 0,
+if (document.querySelector('.voice__swiper')) {
+    const voiceSwiper = new Swiper('.voice__swiper', {
+        slidesPerView: 1,
+        spaceBetween: 35,
+        loop: true,
+        grabCursor: false,
+        speed: 600,
+        breakpoints: {
+            768: {
+                slidesPerView: 3,
+                spaceBetween: 35,
+            }
         }
-    }
-});
+    });
 
-document.querySelector('.voice-btn-prev').addEventListener('click', () => {
-    voiceSwiper.slidePrev();
-});
-document.querySelector('.voice-btn-next').addEventListener('click', () => {
-    voiceSwiper.slideNext();
-});
+    document.querySelector('.voice-btn-prev').addEventListener('click', () => {
+        voiceSwiper.slidePrev();
+    });
+    document.querySelector('.voice-btn-next').addEventListener('click', () => {
+        voiceSwiper.slideNext();
+    });
+}
 
 

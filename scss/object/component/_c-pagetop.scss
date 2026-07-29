@@ -11,9 +11,11 @@
     justify-content: center;
     width: 6.8rem;
     height: 6.8rem;
+    border-radius: 50%;
+    clip-path: circle(50%);
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.4s, visibility 0.4s, background-color 0.4s, box-shadow 0.4s;
+    transition: opacity 0.4s, visibility 0.4s;
     @include pc {
         right: 11.6rem;
         bottom: 7.5rem;
@@ -21,17 +23,9 @@
 }
 
 @include hover {
-    .pagetop:hover {
+    .pagetop.is-show:hover {
         @include pc {
-            background-color: $color-white;
-            box-shadow: 0 0 0 2px #4d4d4d;
             opacity: 0.7;
-        }
-    }
-
-    .pagetop:hover .pagetop__icon {
-        @include pc {
-            filter: invert(1);
         }
     }
 }
@@ -45,11 +39,4 @@
     position: absolute;
     opacity: 1;
     visibility: visible;
-}
-
-.pagetop__icon {
-    width: 6.8rem;
-    height: 6.8rem;
-    object-fit: contain;
-    transition: filter 0.4s;
 }

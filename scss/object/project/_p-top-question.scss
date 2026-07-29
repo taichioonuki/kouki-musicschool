@@ -27,27 +27,29 @@
 
 .qa-title {
     position: relative;
-    padding-top: 1.8rem;
-    padding-bottom: 0.8rem;
-    border-bottom: solid 0.5px $color-black;
+    margin-top: 1.8rem;
+    margin-bottom: 0.8rem;
     display: flex;
     flex-direction: row;
     cursor: pointer;
     align-items: center;
     font-size: 1.6rem;
     line-height: calc(30 / 16);
-    padding-right: 13%;
+    margin-right: 13%;
     @include pc {
-        padding-top: 0.65rem;
-        padding-bottom: 0;
+        margin-top: 0.65rem;
+        margin-bottom: 0;
         font-size: 1.7rem;
         line-height: calc(30 / 17);
-        padding-right: 0;
+        margin-right: 0;
     }
 
-    .qa-icon {
+    .qa-title__icon {
+        display: block;
+        flex-shrink: 0;
         width: 3.5rem;
-        margin: 0.8rem 2rem 1.5rem 0;
+        aspect-ratio: 1 / 1;
+        margin: 0.85rem 2rem 1.45rem 0;
         @include pc {
             margin: 0.8rem 1rem 1.5rem 2rem;
         }
@@ -55,15 +57,15 @@
 }
 
 .qa-title:nth-of-type(4) {
-    padding-top: 0.2rem;
-    padding-bottom: 0;
+    margin-top: 0.2rem;
+    margin-bottom: 0;
     @include pc {
-        padding-top: 0.65rem;
-        padding-bottom: 0;
+        margin-top: 0.65rem;
+        margin-bottom: 0;
     }
 }
 
-.qa-title:nth-of-type(4) .qa-icon {
+.qa-title:nth-of-type(4) .qa-title__icon {
     margin-bottom: 1rem;
     @include pc {
         margin-bottom: 1.5rem;
@@ -72,8 +74,8 @@
 
 .qa-title::after {
     position: absolute;
-    top: 50%;
-    right: 1.5rem;
+    top: 45%;
+    right: -2.8rem;
     display: block;
     content: "";
     width: 1.2rem;
@@ -99,13 +101,11 @@
 }
 
 .qa-text {
-    display: none;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease;
     cursor: pointer;
-    padding-top: 1.6rem;
-    padding-bottom: 0.9rem;
     padding-right: 5rem;
-    flex-direction: row;
-    align-items: center;
     background: $color-pink;
     font-size: 1.6rem;
     line-height: calc(30 / 16);
@@ -115,14 +115,30 @@
     @include pc {
         font-size: 1.7rem;
         line-height: calc(30 / 17);
-        padding-top: 1.3rem;
-        padding-bottom: 0.9rem;
         padding-right: 11%;
     }
+}
 
-    .qa-icon {
+// .qa-text.is-open の max-height は main.js が実際のコンテンツの高さに合わせて動的に設定する
+
+.qa-text__inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow: hidden;
+    padding-top: 1.6rem;
+    padding-bottom: 0.9rem;
+    @include pc {
+        padding-top: 1.3rem;
+        padding-bottom: 0.9rem;
+    }
+
+    .qa-text__icon {
+        display: block;
+        flex-shrink: 0;
         width: 3.5rem;
-        margin: 0 2rem 0.6rem 0;
+        aspect-ratio: 1 / 1;
+        margin: 0rem 2rem 0.3rem 0;
         @include pc {
             margin: 0.3rem 1rem 0.6rem 2rem;
         }

@@ -4,12 +4,11 @@
 .page-plan {
     // 料金体系セクション
     .plan-overview {
-        padding: 4.6rem 0 3.3rem;
+        padding: 4.6rem 0 3.8rem;
         @include pc {
-            padding: 6.7rem 0 5.8rem;
+            padding: 6.6rem 0 5.7rem;
         }
     }
-
     .plan-overview__title {
         text-align: center;
         font-size: 2.5rem;
@@ -23,10 +22,10 @@
         justify-content: center;
         flex-direction: column;
         margin-top: 3.9rem;
-        gap: 2.05rem;
+        gap: 2rem;
         @include pc {
             flex-direction: row;
-            margin-top: 3.7rem;
+            margin-top: 3.8rem;
             gap: 3rem;
         }
     }
@@ -49,9 +48,6 @@
         display: block;
         width: 1.85rem;
         height: 1.85rem;
-        @include pc {
-            margin-top: 0.6rem;
-        }
     }
 
     .plan-overview__fee-plus::before,
@@ -66,6 +62,9 @@
         top: 0;
         left: 50%;
         transform: translateX(-50%);
+        @include pc {
+            top: 23%;
+        }
     }
 
     .plan-overview__fee-plus::after {
@@ -74,6 +73,9 @@
         top: 50%;
         left: 0;
         transform: translateY(-50%);
+        @include pc {
+            top: 70%;
+        }
     }
 
     .plan-overview__desc {
@@ -92,7 +94,7 @@
 
     // プラン内容・月額料金テーブルセクション
     .plan-table {
-        padding: 0.5rem 0 18.7rem;
+        padding: 0rem 0 18.7rem;
         margin-top: 0;
         @include pc {
             padding: 0 0 22.3rem;
@@ -104,42 +106,34 @@
         font-size: 2.5rem;
         font-weight: 700;
         line-height: calc(40 / 25);
+        margin-bottom: 1rem;
+        @include pc {
+            margin-bottom: 4.8rem;
+        }
     }
 
     .plan-table__wrapper {
-        margin-top: 0rem;
+        margin-top: 1.1rem;
         overflow-x: scroll;
         scrollbar-width: none;
         &::-webkit-scrollbar {
             display: none;
         }
         @include pc {
-            margin-top: 1.5rem;
-        }
-    }
-
-    .plan-table__head-row {
-        display: flex;
-        align-items: flex-end;
-        width: 66.8rem;
-        margin-top: 1.1rem;
-        @include pc {
-            width: 100%;
-            margin-top: 3.2rem;
+            margin-top: 4.7rem;
         }
     }
 
     .plan-table__head-cell {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 0;
         text-align: center;
-        flex-shrink: 0;
+        vertical-align: bottom;
     }
 
     .plan-table__head-cell--label {
-        flex-shrink: 0;
+        padding: 0;
         width: 16.7rem;
+        vertical-align: bottom;
         @include pc {
             width: 22rem;
         }
@@ -179,6 +173,7 @@
         align-items: center;
         justify-content: center;
         font-size: 1.7rem;
+        line-height: 1.3;
         color: $color-white;
         margin-top: 1.5rem;
     }
@@ -189,7 +184,7 @@
         height: 1.5rem;
         border-radius: 50%;
         background: $color-black;
-        margin: 0rem auto 0.8rem;
+        margin: 0rem auto 0.6rem;
         @include pc {
             margin: 0.7rem 9.2rem 0.7rem;
         }
@@ -199,7 +194,7 @@
         display: block;
         width: 3rem;
         height: 1px;
-        background: rgba(112, 112, 112, 1);
+        background: #707070;
         position: relative;
         top: -0.4rem;
         left: 6rem;
@@ -212,6 +207,7 @@
     .plan-table__sub-text {
         display: block;
         font-size: 1.7rem;
+        line-height: calc(30 / 17);
         position: relative;
     }
 
@@ -228,6 +224,9 @@
     }
 
     .plan-table__head-black {
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: $color-black;
         color: $color-white;
         font-weight: 700;
@@ -236,7 +235,7 @@
         font-size: 2rem;
         line-height: calc(25 / 20);
         @include pc {
-            flex: 1;
+            width: 100%;
             height: 4.9rem;
             font-size: 2rem;
             line-height: calc(33 / 20);
@@ -244,7 +243,6 @@
     }
 
     .plan-table__head-basic {
-        flex: none;
         width: 16.7rem;
         @include pc {
             width: 22rem;
@@ -252,30 +250,31 @@
     }
 
     .plan-table__head-spacer {
+        padding: 0;
         width: 0;
-        flex-shrink: 0;
         overflow: hidden;
     }
 
     .plan-table__head-red {
+        display: flex;
         background: $color-red;
         position: relative;
         color: $color-white;
         font-size: 2rem;
+        line-height: 1.3;
         font-weight: 700;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         width: 16.7rem;
-        height: 9rem;
-        padding: 0.7rem 1.5rem 0.7rem;
+        min-height: 9rem;
+        padding: 0.5rem 1.5rem;
         @include pc {
             flex-direction: row;
             justify-content: center;
             align-items: flex-end;
-            flex: 1;
-            width: 22rem;
-            height: 8rem;
+            width: 100%;
+            min-height: 8rem;
             padding: 3rem 0rem 0.7rem;
         }
     }
@@ -338,7 +337,7 @@
     }
 
     .plan-table__table tbody tr td.is-recommended {
-        font-weight: 700;
+        font-weight: 500;
     }
 
     .plan-table__table tbody tr td.is-recommended .plan-table__dot {
@@ -352,6 +351,7 @@
 
     .plan-table__table tbody tr:nth-child(1) td:not(.plan-table__label):not(.plan-table__spacer) {
         font-size: 2.2rem;
+        line-height: calc(33 / 22);
         font-weight: 700;
         padding: 1rem 1rem 0.45rem;
         @include pc {
@@ -387,7 +387,7 @@
     .plan-table__scrollbar {
         display: block;
         position: relative;
-        height: 23px;
+        height: 2.3rem;
         background: rgba(80, 80, 80, 0.15);
         margin-top: 1.75rem;
         margin-left: 0;

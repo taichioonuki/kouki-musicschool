@@ -37,12 +37,11 @@
     width: 33.5rem;
     height: 6rem;
     position: relative;
-    top: 0;
-    padding-top: 0;
     font-weight: 700;
     background-color: $color-red;
     color: $color-white;
     font-size: 2rem;
+    line-height: 1;
     text-decoration: none;
     letter-spacing: 0.17em;
     cursor: pointer;
@@ -50,8 +49,6 @@
     transition: color 0.4s, background-color 0.4s;
     @include pc {
         width: 30rem;
-        padding-top: 0.7rem;
-        top: 12%;
     }
 }
 

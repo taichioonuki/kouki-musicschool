@@ -42,6 +42,7 @@
         line-height: calc(33 / 25);
         font-weight: 700;
         text-decoration: none;
+        border: 1px solid $color-red;
         transition: background-color 0.4s, color 0.4s;
         @include pc {
             width: 25rem;

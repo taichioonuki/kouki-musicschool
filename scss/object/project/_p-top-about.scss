@@ -71,17 +71,14 @@
 .about__arrow::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 0;
-    margin-top: 1.7rem;
-    transform: translateX(-50%) translateY(-40%) rotate(-45deg);
-    width: 2.5rem;
-    height: 2.5rem;
-    border-top: 3px solid $color-red;
-    border-right: 3px solid $color-red;
-    border-radius: 1px;
+    top: 0.2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.5rem;
+    height: 2rem;
+    background: url('../images/about-arrow.svg') no-repeat center / contain;
     @include pc {
-        margin-top: 0.7rem;
+        top: -0.8rem;
     }
 }
 
@@ -121,7 +118,7 @@
     bottom: 3rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 3px;
+    width: 0.3rem;
     background-color: $color-red;
     z-index: 1;
     @include pc {
@@ -189,16 +186,16 @@
 // 1つ目のドット（Enthusiasm）
 .about__list li:nth-child(1) .dot {
     top: 0;
-    left: -0.2rem;
+    right: 0.2rem;
     @include pc {
-        left: 0rem;
+        right: 0.1rem;
     }
 }
 
 // 2つ目のドット（Envision）
 .about__list li:nth-child(2) .dot {
     top: 0.1rem;
-    left: 0.1rem;
+    left: 0rem;
     @include pc {
         top: 0;
         left: 0;
@@ -208,9 +205,10 @@
 // 3つ目のドット（Effulgent）
 .about__list li:nth-child(3) .dot {
     top: 0;
-    left: 0rem;
+    right: 0.1rem;
     @include pc {
         left: 0.2rem;
+        right: 0;
     }
 }
 

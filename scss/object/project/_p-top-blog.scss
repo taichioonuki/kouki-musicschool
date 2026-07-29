@@ -24,13 +24,15 @@
 .blog__items {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     margin-top: 4rem;
     row-gap: 4.2rem;
     @include pc {
         flex-direction: row;
+        justify-content: flex-start;
         margin-top: 3.8rem;
         row-gap: 5rem;
+        column-gap: 5rem;
     }
 }
 
@@ -48,7 +50,7 @@
 }
 
 @include hover {
-    .blog-item__link:hover img {
+    .blog-item__link:hover .blog-item__image {
         @include pc {
             opacity: 0.7;
         }
@@ -61,24 +63,9 @@
     width: 100%;
     overflow: hidden;
     aspect-ratio: 670 / 400;
+    transition: opacity 0.4s;
     @include pc {
         aspect-ratio: auto;
-    }
-}
-
-.blog-item__image picture {
-    display: block;
-}
-
-.blog-item__image img {
-    transition: opacity 0.4s;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    @include pc {
-        width: auto;
-        height: auto;
-        object-fit: fill;
     }
 }
 

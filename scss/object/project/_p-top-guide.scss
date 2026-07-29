@@ -1,11 +1,14 @@
 @use '../../foundation/variable' as *;
 @use '../../foundation/mixin' as *;
 
+// guide-item のテキストだけを上下させる量（ここを変えると .guide-item と ::before の丸が自動で連動）
+$guide-item-shift: 0.75rem;
+
 //guide
 .guide {
-    padding: 4.6rem 0 4.8rem;
+    padding: 4.6rem 0 1.3rem;
     @include pc {
-        padding: 3.4rem 0 7.3rem;
+        padding: 3.4rem 0 4.3rem;
     }
 }
 
@@ -23,11 +26,9 @@
 .guide__items {
     position: relative;
     padding-left: 1.5rem;
-    padding-bottom: 0.7rem;
     margin: 4.3rem auto 0;
     @include pc {
         padding-left: 6rem;
-        padding-bottom: 3.5rem;
         margin: 6rem auto 0;
     }
 }
@@ -37,40 +38,43 @@
     position: absolute;
     left: 1.7rem;
     top: 2rem;
-    bottom: 2rem;
+    height: 65.7rem;
     width: 0.3rem;
     background: $color-red;
     @include pc {
         left: 6rem;
         top: 0;
+        height: 42.4rem;
     }
 }
 
 .guide__items::after {
     content: '';
     position: absolute;
-    left: 0.55rem;
-    width: 2.6rem;
-    height: 2.6rem;
-    bottom: 2.2rem;
-    border-right: 0.3rem solid $color-red;
-    border-bottom: 0.3rem solid $color-red;
-    transform: rotate(45deg);
+    left: 1.5rem;
+    transform: translateX(-40%);
+    width: 3.5rem;
+    height: 2rem;
+    top: 66rem;
+    background: url('../images/guide-arrow.svg') no-repeat center / contain;
     @include pc {
-        left: 4.85rem;
+        left: 6.15rem;
+        top: 40.7rem;
+        transform: translateX(-49%);
     }
 }
 
 .guide-item {
     position: relative;
-    padding-bottom: 4.2rem;
+    margin-bottom: 3.5rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    transform: translateY(-$guide-item-shift);
     @include pc {
         flex-direction: row;
         align-items: flex-start;
-        padding-bottom: 6.5rem;
+        margin-bottom: 5.8rem;
     }
 }
 
@@ -87,6 +91,7 @@
     border-radius: 50%;
     background: $color-red;
     z-index: 1;
+    transform: translateY($guide-item-shift);
     @include pc {
         left: -0.9rem;
     }
@@ -97,7 +102,6 @@
     font-size: 2.2rem;
     line-height: calc(33 / 22);
     font-weight: 700;
-    margin-top: -0.7rem;
     margin-left: 3.3rem;
     white-space: nowrap;
     width: 100%;
@@ -112,10 +116,15 @@
     line-height: calc(30 / 16);
     margin-left: 3.3rem;
     margin-top: 1rem;
+    // 500px到達後にルートフォントサイズが頭打ちになり、そのまま幅だけ広がると
+    // 折り返し行数が変わって高さがズレる（=左の赤い線が合わなくなる）ため、
+    // 500px時点の折り返し幅で固定して375〜767pxで折り返しを一定に保つ
+    max-width: 367.7px;
     @include pc {
         font-size: 1.8rem;
         line-height: calc(30 / 18);
-        margin-top: -0.7rem;
+        margin-top: 0;
         margin-left: 0;
+        max-width: none;
     }
 }

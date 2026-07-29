@@ -31,7 +31,9 @@
 }
 
 .footer__image {
+    display: block;
     width: 3.2rem;
+    aspect-ratio: 33 / 50;
     margin: 1.9rem auto 0;
     @include pc {
         margin: 2.17rem auto 0;

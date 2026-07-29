@@ -49,17 +49,17 @@
 }
 
 .pagination__item a,
-.pagination__item.is-active span {
+.pagination__item.is-active span,
+.pagination__item.is-dots span {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 4.4rem;
     height: 4.4rem;
-    border: 1px solid #333333;
     font-size: 1.6rem;
     line-height: calc(30 / 16);
     font-weight: 700;
-    color: #333333;
+    color: $color-black;
     text-decoration: none;
     transition: background-color 0.4s, color 0.4s;
     @include pc {
@@ -68,21 +68,24 @@
     }
 }
 
+.pagination__item a,
 .pagination__item.is-active span {
-    background-color: #333333;
-    border-color: #333333;
+    border: 1px solid $color-black;
+}
+
+.pagination__item.is-active span {
+    background-color: $color-black;
+    border-color: $color-black;
     color: $color-white;
 }
 
 .pagination__item.is-dots span {
     border: none;
-    font-size: 1.6rem;
-    font-weight: 700;
 }
 
 @include hover {
     .pagination__item a:hover {
-        background-color: #333333;
+        background-color: $color-black;
         color: $color-white;
         opacity: 1;
     }

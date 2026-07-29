@@ -4,10 +4,14 @@
 //voice
 .voice {
     position: relative;
-    padding: 4.5rem 0 1.4rem;
+    padding: 4.5rem 0 5rem;
     background: $color-red;
     @include pc {
         padding: 4.4rem 0 8rem;
+    }
+
+    > .inner {
+        position: relative;
     }
 }
 
@@ -27,19 +31,13 @@
     margin-top: 4rem;
     @include pc {
         margin-top: 3.6rem;
-        .swiper-wrapper {
-            gap: 3.5rem;
-        }
-        .swiper-slide {
-            width: calc((100% - 7rem) / 3) !important;
-        }
     }
 }
 
 .voice-btn-prev,
 .voice-btn-next {
     position: absolute;
-    top: 25.3rem;
+    top: 20.8rem;
     width: 3rem;
     height: 4rem;
     padding: 0;
@@ -50,7 +48,7 @@
     pointer-events: all;
     transition: opacity 0.4s;
     @include pc {
-        top: 25.5rem;
+        top: 21.1rem;
     }
 }
 
@@ -65,20 +63,24 @@
     left: 2rem;
     transform: scaleX(-1);
     @include pc {
-        left: 5.5rem;
+        left: max(-1.5rem, calc((94rem - 100vw) / 2));
     }
 }
 
 .voice-btn-next {
     right: 2rem;
     @include pc {
-        right: 5.6rem;
+        right: max(-1.5rem, calc((94rem - 100vw) / 2));
     }
 }
 
 .voice-item__image {
     width: 100%;
+    aspect-ratio: 67 / 40;
     overflow: hidden;
+    @include pc {
+        aspect-ratio: 270 / 190;
+    }
 }
 
 .voice-item__link {
@@ -92,12 +94,15 @@
     }
 }
 
-.voice-item__img {
+.voice-item__photo {
+    display: block;
+    width: 100%;
+    height: 100%;
     transition: transform 0.4s;
 }
 
 @include hover {
-    .voice-item:hover .voice-item__img {
+    .voice-item:hover .voice-item__photo {
         @include pc {
             transform: scale(1.1);
         }
@@ -121,7 +126,7 @@
     }
 }
 
-.voice-item__text h2 {
+.voice-item__text h3 {
     display: flex;
     justify-content: center;
     font-size: 2.2rem;

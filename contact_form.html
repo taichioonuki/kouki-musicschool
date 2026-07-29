@@ -5,6 +5,9 @@
     <link rel="icon" href="images/header-icon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>お問い合わせ | きたむらミュージックスクール</title>
 </head>
@@ -19,25 +22,27 @@
         <div class="header-menu">
             <nav>
                 <ul>
-                    <li><a href="./plan.html">料金</a></li>
-                    <li><a href="./blog_list.html">ブログ</a></li>
-                    <li><a href="./result_list.html">卒業実績</a></li>
+                    <li><a href="./plan.html"><span>料金</span></a></li>
+                    <li><a href="./blog_list.html"><span>ブログ</span></a></li>
+                    <li><a href="./result_list.html"><span>卒業実績</span></a></li>
                 </ul>
             </nav>
         </div>
         <div id="js-overlay" class="overlay"></div>
         <div class="inner">
             <div class="header__left">
-                <div class="header__image">
-                    <img src="images/header-icon.svg" alt="">
-                </div>
-                <h1 class="header__logo"><a href="./index.html">きたむら<br class="pc"><span>ミュージックスクール</span></a></h1>
+                <a href="./index.html" class="header__link">
+                    <div class="header__image">
+                        <img src="images/header-icon.svg" alt="ヘッダーアイコン">
+                    </div>
+                    <div class="header__logo">きたむら<br class="pc"><span>ミュージックスクール</span></div>
+                </a>
             </div>
             <nav class="header__nav pc">
                 <ul>
-                    <li><a href="./plan.html">料金</a></li>
-                    <li><a href="./blog_list.html">ブログ</a></li>
-                    <li><a href="./result_list.html">卒業実績</a></li>
+                    <li><a href="./plan.html"><span>料金</span></a></li>
+                    <li><a href="./blog_list.html"><span>ブログ</span></a></li>
+                    <li><a href="./result_list.html"><span>卒業実績</span></a></li>
                     <li class="nav-contact"><a href="./contact_form.html">お問い合わせ</a></li>
                 </ul>
             </nav>
@@ -55,7 +60,7 @@
                             </picture>
                         </div>
                         <div class="fv__catch">
-                            <h2>お問い合わせ</h2>
+                            <h1>お問い合わせ</h1>
                         </div>
                     </div>
                 </section>
@@ -63,7 +68,7 @@
                 <nav class="breadcrumb">
                     <div class="inner">
                         <ol class="breadcrumb__list">
-                            <li class="breadcrumb__item"><a href="./index.html">ホーム</a></li>
+                            <li class="breadcrumb__item"><a href="./index.html" class="breadcrumb__link">ホーム</a></li>
                             <li class="breadcrumb__item">お問い合わせ</li>
                         </ol>
                     </div>
@@ -143,7 +148,7 @@
         </main>
 
         <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
-            <img class="pagetop__icon" src="images/top-icon.svg" width="68" height="68" alt="ページトップへ戻る">
+            <img src="images/top-icon.svg" alt="ページトップへ戻る">
         </a>
 
         <footer class="footer">
@@ -151,15 +156,15 @@
                 <nav class="footer__nav-link">
                     <ul>
                         <li><a href="./index.html">ホーム</a></li>
-                        <li><a href="./plan.html">料金</a></li>
-                        <li><a href="./blog_list.html">ブログ</a></li>
-                        <li><a href="./result_list.html">卒業実績</a></li>
+                        <li><a href="./plan.html"><span>料金</span></a></li>
+                        <li><a href="./blog_list.html"><span>ブログ</span></a></li>
+                        <li><a href="./result_list.html"><span>卒業実績</span></a></li>
                     </ul>
                 </nav>
             </div>
-            <div class="footer__image">
+            <a href="./index.html" class="footer__image">
                 <img src="images/footer-icon.svg" alt="フッターアイコン">
-            </div>
+            </a>
             <div class="footer__copyright">
                 <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
             </div>

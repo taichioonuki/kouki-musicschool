@@ -5,6 +5,9 @@
     <link rel="icon" href="images/header-icon.svg">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>アルペジオが劇的に向上する３つの習慣 | きたむらミュージックスクール</title>
 </head>
@@ -28,10 +31,12 @@
         <div id="js-overlay" class="overlay"></div>
         <div class="inner">
             <div class="header__left">
-                <div class="header__image">
-                    <img src="images/header-icon.svg" alt="">
-                </div>
-                <p class="header__logo"><a href="./index.html">きたむら<br class="pc"><span>ミュージックスクール</span></a></p>
+                <a href="./index.html" class="header__link">
+                    <div class="header__image">
+                        <img src="images/header-icon.svg" alt="ヘッダーアイコン">
+                    </div>
+                    <div class="header__logo">きたむら<br class="pc"><span>ミュージックスクール</span></div>
+                </a>
             </div>
             <nav class="header__nav pc">
                 <ul>
@@ -49,9 +54,9 @@
                 <nav class="breadcrumb">
                     <div class="inner">
                         <ol class="breadcrumb__list">
-                            <li class="breadcrumb__item"><span class="breadcrumb__link" onclick="location.href='./index.html'">ホーム</span></li>
-                            <li class="breadcrumb__item"><span class="breadcrumb__link" onclick="location.href='./blog_list.html'">ブログ</span></li>
-                            <li class="breadcrumb__item">ギター</li>
+                            <li class="breadcrumb__item"><a href="./index.html" class="breadcrumb__link">ホーム</a></li>
+                            <li class="breadcrumb__item"><a href="./blog_list.html" class="breadcrumb__link">ブログ</a></li>
+                            <li class="breadcrumb__item"><a href="./blog_list.html" class="breadcrumb__link">ギター</a></li>
                             <li class="breadcrumb__item">アルペジオが劇的に向上する３つの習慣</li>
                         </ol>
                     </div>
@@ -77,34 +82,44 @@
 
                                 <div class="blog-details__share">
                                     <a href="#" class="share-btn share-btn--facebook" target="_blank" rel="noopener noreferrer">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="images/list-facebook-pc.jpg">
-                                            <img src="images/list-facebook-sp.svg" alt="Facebookでシェア">
-                                        </picture>
+                                        <span class="share-btn__icon">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="images/list-facebook-pc.jpg">
+                                                <img src="images/list-facebook-sp.svg" alt="Facebookでシェア">
+                                            </picture>
+                                        </span>
                                     </a>
                                     <a href="#" class="share-btn share-btn--twitter" target="_blank" rel="noopener noreferrer">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="images/list-twitter-pc.jpg">
-                                            <img src="images/list-twitter-sp.svg" alt="Twitterでシェア">
-                                        </picture>
+                                        <span class="share-btn__icon">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="images/list-twitter-pc.jpg">
+                                                <img src="images/list-twitter-sp.svg" alt="Twitterでシェア">
+                                            </picture>
+                                        </span>
                                     </a>
                                     <a href="#" class="share-btn share-btn--hatena" target="_blank" rel="noopener noreferrer">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="images/list-hatena-pc.jpg">
-                                            <img src="images/list-hatena-sp.svg" alt="はてなブックマーク">
-                                        </picture>
+                                        <span class="share-btn__icon">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="images/list-hatena-pc.jpg">
+                                                <img src="images/list-hatena-sp.svg" alt="はてなブックマーク">
+                                            </picture>
+                                        </span>
                                     </a>
                                     <a href="#" class="share-btn share-btn--line" target="_blank" rel="noopener noreferrer">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="images/list-line-pc.jpg">
-                                            <img src="images/list-line-sp.svg" alt="LINEでシェア">
-                                        </picture>
+                                        <span class="share-btn__icon">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="images/list-line-pc.jpg">
+                                                <img src="images/list-line-sp.svg" alt="LINEでシェア">
+                                            </picture>
+                                        </span>
                                     </a>
                                     <a href="#" class="share-btn share-btn--pocket" target="_blank" rel="noopener noreferrer">
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="images/list-pocket-pc.jpg">
-                                            <img src="images/list-pocket-sp.svg" alt="Pocketに保存">
-                                        </picture>
+                                        <span class="share-btn__icon">
+                                            <picture>
+                                                <source media="(min-width: 768px)" srcset="images/list-pocket-pc.jpg">
+                                                <img src="images/list-pocket-sp.svg" alt="Pocketに保存">
+                                            </picture>
+                                        </span>
                                     </a>
                                 </div>
 
@@ -126,6 +141,7 @@
                                     <hr class="blog-details__divider">
                                     <h3>H3見出しが入ります。H3見出しが入ります。</h3>
                                     <blockquote class="blog-details__blockquote">
+                                        <span class="blog-details__blockquote-icon"><img src="images/icon-blockquote.svg" alt=""></span>
                                         <p>本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。本文が入ります。</p>
                                     </blockquote>
                                     <p><a href="#" class="blog-details__link">テキストリンク</a></p>
@@ -138,7 +154,7 @@
                                             <div class="blog-details__nav-image">
                                                 <picture>
                                                     <source media="(min-width: 768px)" srcset="images/blog_list-03-pc.jpg">
-                                                    <img src="images/blog_list-03-sp.jpg" alt="前の記事" width="160" height="107">
+                                                    <img src="images/blog_list-03-sp.jpg" alt="前の記事">
                                                 </picture>
                                             </div>
                                             <div class="blog-details__nav-body">
@@ -152,7 +168,7 @@
                                             <div class="blog-details__nav-image">
                                                 <picture>
                                                     <source media="(min-width: 768px)" srcset="images/blog_list-03-pc.jpg">
-                                                    <img src="images/blog_list-03-sp.jpg" alt="次の記事" width="160" height="107">
+                                                    <img src="images/blog_list-03-sp.jpg" alt="次の記事">
                                                 </picture>
                                             </div>
                                             <div class="blog-details__nav-body">
@@ -163,14 +179,14 @@
                                 </nav>
 
                                 <div class="blog-details__related">
-                                    <h3 class="blog-details__related-title">関連記事</h3>
+                                    <h4 class="blog-details__related-title">関連記事</h4>
                                     <div class="blog-details__related-items">
                                         <a href="#" class="blog-details__related-item">
                                             <div class="blog-details__related-image">
                                                 <span class="blog-list-item__category blog-list-item__category">ギター</span>
                                                 <picture>
                                                     <source media="(min-width: 768px)" srcset="images/blog-list-item__category-pc.jpg">
-                                                    <img class="blog-details__related-img" src="images/blog-list-item__category-sp.jpg" width="160" height="110" alt="関連記事1">
+                                                    <img src="images/blog-list-item__category-sp.jpg" alt="関連記事1">
                                                 </picture>
                                             </div>
                                             <div class="blog-details__related-body">
@@ -183,7 +199,7 @@
                                                 <span class="blog-list-item__category blog-list-item__category">ギター</span>
                                                 <picture>
                                                     <source media="(min-width: 768px)" srcset="images/blog-list-item__category-pc.jpg">
-                                                    <img class="blog-details__related-img" src="images/blog-list-item__category-sp.jpg" width="160" height="110" alt="関連記事2">
+                                                    <img src="images/blog-list-item__category-sp.jpg" alt="関連記事2">
                                                 </picture>
                                             </div>
                                             <div class="blog-details__related-body">
@@ -196,7 +212,7 @@
                                                 <span class="blog-list-item__category blog-list-item__category">ギター</span>
                                                 <picture>
                                                     <source media="(min-width: 768px)" srcset="images/blog-list-item__category-pc.jpg">
-                                                    <img class="blog-details__related-img" src="images/blog-list-item__category-sp.jpg" width="160" height="110" alt="関連記事3">
+                                                    <img src="images/blog-list-item__category-sp.jpg" alt="関連記事3">
                                                 </picture>
                                             </div>
                                             <div class="blog-details__related-body">
@@ -210,26 +226,26 @@
 
                             <aside class="blog-details__sidebar">
                                 <div class="sidebar-widget">
-                                    <h3 class="sidebar-widget__title">無料メールマガジン</h3>
+                                    <p class="sidebar-widget__title">無料メールマガジン</p>
                                     <a href="#" class="sidebar-ad">
                                         <p>バナー広告</p>
                                     </a>
                                 </div>
 
                                 <div class="sidebar-widget sidebar-search">
-                                    <h3 class="sidebar-widget__title">ブログ内を検索</h3>
+                                    <p class="sidebar-widget__title">ブログ内を検索</p>
                                     <div class="sidebar-widget__body">
                                         <form class="sidebar-search__form" action="./search.html" method="get">
                                             <input type="text" class="sidebar-search__input" name="q" aria-label="検索キーワード">
                                             <button type="submit" class="sidebar-search__btn" aria-label="検索">
-                                                <img class="sidebar-search__icon" src="images/search.svg" width="22" height="24" alt="">
+                                                <span class="sidebar-search__btn-icon"><img src="images/search.svg" alt="検索"></span>
                                             </button>
                                         </form>
                                     </div>
                                 </div>
 
                                 <div class="sidebar-widget sidebar-recommended">
-                                    <h3 class="sidebar-widget__title">おすすめの記事</h3>
+                                    <p class="sidebar-widget__title">おすすめの記事</p>
                                     <div class="sidebar-widget__body">
                                         <ul class="sidebar-recommended__list">
                                             <li class="sidebar-recommended__item">
@@ -264,7 +280,7 @@
                                 </div>
 
                                 <div class="sidebar-widget sidebar-categories">
-                                    <h3 class="sidebar-widget__title">カテゴリー</h3>
+                                    <p class="sidebar-widget__title">カテゴリー</p>
                                     <div class="sidebar-widget__body">
                                         <ul class="sidebar-categories__list">
                                             <li><a href="#">カテゴリー</a></li>
@@ -284,7 +300,7 @@
         </main>
 
         <a href="#" id="js-pagetop" class="pagetop" aria-label="ページトップへ戻る">
-            <img class="pagetop__icon" src="images/top-icon.svg" width="68" height="68" alt="ページトップへ戻る">
+            <img src="images/top-icon.svg" alt="ページトップへ戻る">
         </a>
 
         <div class="contact-btn">
@@ -301,9 +317,9 @@
                     </ul>
                 </nav>
             </div>
-            <div class="footer__image">
+            <a href="./index.html" class="footer__image">
                 <img src="images/footer-icon.svg" alt="フッターアイコン">
-            </div>
+            </a>
             <div class="footer__copyright">
                 <p class="copyright">Copyright © 0000 KITAMURA music school Inc. <br class="sp">All Rights</p>
             </div>
